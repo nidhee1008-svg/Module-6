@@ -1,32 +1,62 @@
-# # 🐍 Python OOP: Polymorphism with Classes
+# 🐍 Python OOP: Polymorphism with Classes
 
-## 🎯 AIM
+## AIM
 
-To create two specific classes — `Beans` and `Mango`. Then, create a **generic function** that can accept any object and determine its **type** (Fruit or Vegetable) and **color**, using polymorphism.
+To create two classes, `Beans` and `Mango`, and demonstrate polymorphism using a generic function that identifies the type and color of the objects.
 
----
+## ALGORITHM
 
-## 🧠 ALGORITHM
+1. Create a class `Beans`.
+2. Define the method `type()` to display "Vegetable".
+3. Define the method `color()` to display "Green".
+4. Create a class `Mango`.
+5. Define the method `type()` to display "Fruit".
+6. Define the method `color()` to display "Yellow".
+7. Define a generic function `func(obj)` that calls `obj.type()` and `obj.color()`.
+8. Create objects of `Beans` and `Mango`.
+9. Pass the objects to the function `func()`.
+10. Display the output.
 
-1. **Create Class `Beans`**:
-   - Define `type()` method that prints `"Vegetable"`.
-   - Define `color()` method that prints `"Green"`.
+## PROGRAM
 
-2. **Create Class `Mango`**:
-   - Define `type()` method that prints `"Fruit"`.
-   - Define `color()` method that prints `"Yellow"`.
+```python
+class Beans:
+    def type(self):
+        print("Vegetable")
 
-3. **Define Generic Function `func(obj)`**:
-   - Call `obj.type()` and `obj.color()` — this works with both `Beans` and `Mango` objects, showcasing **polymorphism**.
+    def color(self):
+        print("Green")
 
-4. **Create Objects**:
-   - Instantiate `Beans` and `Mango`.
-   - Pass them to `func()` and execute the program.
 
----
+class Mango:
+    def type(self):
+        print("Fruit")
 
-## 💻 Program
+    def color(self):
+        print("Yellow")
 
-## Output
 
-## Result
+def func(obj):
+    obj.type()
+    obj.color()
+
+
+b = Beans()
+m = Mango()
+
+func(b)
+func(m)
+```
+
+## OUTPUT
+
+```text
+Vegetable
+Green
+Fruit
+Yellow
+```
+
+## RESULT
+
+Thus, the Python program to demonstrate polymorphism using the classes `Beans` and `Mango` was successfully executed, and the expected output was obtained.
